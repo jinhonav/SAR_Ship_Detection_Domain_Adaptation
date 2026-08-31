@@ -464,27 +464,34 @@ A recommended repository structure is:
 
 ```text
 SAR_Ship_Detection_Domain_Adaptation/
+│
 ├── notebooks/
 │   ├── Train_YOLO_HRSID.ipynb
-│   ├── Train_YOLO_LS_SSDD.ipynb
-│   ├── Mixed_Fine_Tuning_HRSID_LS_SSDD.ipynb
-│   ├── Evaluate_HRSID_Official_Test.ipynb
-│   └── Sentinel1_Direct_Inference.ipynb
+│   ├── Fine_Tuning_YOLO_HRSID_LS_SSDD.ipynb
+│   ├── Mixed_Fine_Tuning_YOLO_HRSID_LS_SSSD.ipynb
+│   ├── Test_HRSID_LS_SSDD_YOLO.ipynb
+│   └── Visualization_Result.ipynb
 │
 ├── figures/
-│   ├── Domain_Adaptation_Workflow.png
-│   ├── HRSID_Only_Sentinel1_Result.png
-│   ├── LS_SSDD_FT_Sentinel1_Result.png
-│   ├── Dynamic_3to1_Sentinel1_Result.png
-│   └── Sentinel1_Dynamic_Mixed_FT_Result.png
+│   ├── YOLO26_HRSID_only_20epoch_Busan1_result.png
+│   ├── YOLO26_HRSID_only_20epoch_Gwangyang1_result.png
+│   ├── YOLO26_HRSID_only_20epoch_Gwangyang2_result.png
+│   ├── YOLO26_HRSID_only_20epoch_Incheon1_result.png
+│   │
+│   ├── YOLO26_HRSID_LS-SSDD_20epoch_Busan1_result.png
+│   ├── YOLO26_HRSID_LS-SSDD_20epoch_Gwangyang1_result.png
+│   ├── YOLO26_HRSID_LS-SSDD_20epoch_Gwangyang2_result.png
+│   ├── YOLO26_HRSID_LS-SSDD_20epoch_Incheon1_result.png
+│   │
+│   ├── YOLO26_3_1_5epoch_busan_result.png
+│   ├── YOLO26_3_1_5epoch_Gwangyang1_result.png
+│   ├── YOLO26_3_1_5epoch_Gwangyang2_result.png
+│   └── YOLO26_3_1_5epoch_Incheon1_result.png
 │
-├── MATLAB/
-│   └── Mapping_Sentinel1.m
-│
+├── README.md
 ├── requirements.txt
-├── LICENSE
 ├── .gitignore
-└── README.md
+└── LICENSE
 ```
 
 Adjust notebook and figure names to match the files actually included in the repository.
