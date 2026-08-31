@@ -379,7 +379,7 @@ Compared with LS-SSDD-only fine-tuning, the mixed strategy dramatically reduces 
 
 The final 3:1 dynamic mixed fine-tuned model was applied to the same unseen Sentinel-1 scenes used in the previous experiments.
 
-![YOLO26_3_1_5epoch_busan_result](figures/DYOLO26_3_1_5epoch_busan_result.png)
+![YOLO26_3_1_5epoch_busan_result](figures/YOLO26_3_1_5epoch_busan_result.png)
 
 ![YOLO26_3_1_5epoch_Gwangyang1_result](figures/YOLO26_3_1_5epoch_Gwangyang1_result.png)
 
@@ -404,29 +404,6 @@ Since independent ground-truth annotations are not available for the Sentinel-1 
 | **Dynamic Mixed FT 3:1** | **0.8898** | **0.6365** |
 
 The mixed model therefore retains most of the source-domain benchmark performance while incorporating Sentinel-1-oriented training data.
-
----
-
-## Sentinel-1 Direct Inference
-
-The models were also applied directly to unseen Sentinel-1 IW GRD imagery.
-
-The HRSID-only detector produced relatively weak confidence on the target imagery despite its high HRSID benchmark accuracy.
-
-After mixed fine-tuning, multiple ship-like targets produced substantially stronger confidence values, including detections in the approximately **0.7–0.85** range in the evaluated scenes.
-
-Example output:
-
-```text
-YOLO26-S
-Detected ship candidates: 43
-```
-
-![Sentinel-1 Ship Detection Result](figures/Sentinel1_Dynamic_Mixed_FT_Result.png)
-
-The number of detections alone should not be interpreted as detection accuracy because independent ground-truth ship annotations are unavailable for these scenes.
-
-Instead, these results are used as qualitative evidence that the mixed model responds more strongly to ship-like targets in unseen Sentinel-1 imagery while retaining HRSID benchmark performance.
 
 ---
 
