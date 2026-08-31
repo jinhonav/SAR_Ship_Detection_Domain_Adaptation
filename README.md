@@ -58,31 +58,7 @@ The objective of this project is therefore:
 
 The overall experimental workflow is:
 
-```text
-COCO-pretrained YOLO26-S
-          |
-          v
-     HRSID Training
-          |
-          v
-  HRSID Ship Detector
-          |
-          +-----------------------------+
-          |                             |
-          v                             v
-Direct Sentinel-1 Inference      LS-SSDD Fine-Tuning
-                                        |
-                                        v
-                              Strong Domain Adaptation
-                              but Catastrophic Forgetting
-                                        |
-                                        v
-                         Dynamic Mixed Fine-Tuning
-                           HRSID + LS-SSDD
-                                        |
-                                        v
-                         Final Cross-Domain Detector
-```
+![Workflow](figures/Workflow.png)
 
 The mixed fine-tuning strategy is designed to balance two competing objectives:
 
