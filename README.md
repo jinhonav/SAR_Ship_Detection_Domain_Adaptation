@@ -132,14 +132,7 @@ The Sentinel-1 imagery used for direct inference is preprocessed before being pa
 
 The workflow includes:
 
-1. Spatial subset
-2. Thermal noise removal
-3. Border noise removal
-4. Radiometric calibration
-5. Conversion to Sigma0
-6. Conversion to decibel scale
-7. Intensity clipping and normalization
-8. Conversion to an 8-bit YOLO-compatible image
+![Sentinel1_SAR_Preprocessing_Workflow](figures/Sentinel1_SAR_Preprocessing_Workflow.png)
 
 For linear Sigma0 values:
 
